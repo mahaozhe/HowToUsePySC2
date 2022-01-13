@@ -76,3 +76,7 @@ You may need to run `pip install --upgrade pip` before all the following steps.
     - Can run the codes directly without any built-in modules.
     - Can debug easily.
     - [Detailed instructions](./Docs/Using_PySC2_Approach_2.md) and [example codes](./Approach_2.py).
+
+## Main Reference
+
+* PySC2 introduction and documents by DeepMind: <https://github.com/deepmind/pysc2>
