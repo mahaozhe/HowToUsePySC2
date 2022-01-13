@@ -59,16 +59,15 @@ from absl import app
 
 
 def main(args):
-	agent = random_agent.RandomAgent()
+    agent = random_agent.RandomAgent()
 
-	with sc2_env.SC2Env(map_name="MoveToBeacon", 
-	                    players=[sc2_env.Agent(sc2_env.Race.terran)],
-						agent_interface_format=sc2_env.AgentInterfaceFormat(
-							feature_dimensions=sc2_env.Dimensions(screen=84, minimap=64)), 
-						step_mul=16,
-						game_steps_per_episode=200 * 16, 
-						visualize=True) as env:
-		run_loop.run_loop([agent], env, 200)
+    with sc2_env.SC2Env(map_name="MoveToBeacon", 
+	                players=[sc2_env.Agent(sc2_env.Race.terran)],
+			agent_interface_format=sc2_env.AgentInterfaceFormat(feature_dimensions=sc2_env.Dimensions(screen=84, minimap=64)), 
+			step_mul=16,
+			game_steps_per_episode=200 * 16, 
+			visualize=True) as env:
+	run_loop.run_loop([agent], env, 200)
 
 
 if __name__ == "__main__":
