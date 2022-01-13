@@ -1,5 +1,7 @@
 # Approach 1: Define Your Own Agent
 
+A basic template for a self-defined agent can be found [here](./../Approach_1.py).
+
 ## How to Use Custom-Defined Agents?
 
 Run the command:
@@ -18,8 +20,6 @@ python -m pysc2.bin.agent --map <Map> --agent MyAgentFile.MyAgentClassName
 
 Any custom designed agent should derive from the `BaseAgent` class (in `pysc2.agents.base_agent`) and override the `step(self, obs)` function, where the argument `obs` is the observations.
 
-A basic template for a self-defined agent can be found [here](./../Approach_1.py).
-
 ## How to Get Observations and Rewards from The Environment?
 
 The observations (as well as the rewards) taken from environment are all included in the parameter `obs` of the `step` function, such as the feature maps, valid actions, rewards and so on. 
@@ -33,3 +33,7 @@ for example:
 
 In the `step` function, return the action (packed up as a `FunctionCall` instance).
 
+## More Reference
+
+* A random agent: <https://github.com/deepmind/pysc2/blob/master/pysc2/agents/random_agent.py>
+* A scripted agent: <https://github.com/deepmind/pysc2/blob/master/pysc2/agents/scripted_agent.py>
